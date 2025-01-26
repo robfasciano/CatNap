@@ -33,6 +33,9 @@ class GameScene: SKScene {
             spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
                                               SKAction.fadeOut(withDuration: 0.5),
                                               SKAction.removeFromParent()]))
+            //adding this is a work around for a frozen animation in scene
+            self.isPaused = true
+            self.isPaused = false
         }
     }
     
@@ -84,5 +87,8 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        
+//        self.isPaused = true
+//        self.isPaused = false
     }
 }
