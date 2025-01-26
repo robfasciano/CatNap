@@ -24,11 +24,16 @@ class GameViewController: UIViewController {
                 view.presentScene(scene)
             }
             
-            view.ignoresSiblingOrder = true
+            view.ignoresSiblingOrder = false
             
             view.showsFPS = true
             view.showsNodeCount = true
         }
+    }
+    
+    //not in instructions
+    override var shouldAutorotate: Bool {
+      return true
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -38,7 +43,13 @@ class GameViewController: UIViewController {
             return .all
         }
     }
-
+    
+    //not in instructions
+    override func didReceiveMemoryWarning() {
+      super.didReceiveMemoryWarning()
+      // Release any cached data, images, etc that aren't in use.
+    }
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
