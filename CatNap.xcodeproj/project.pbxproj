@@ -38,6 +38,7 @@
 		1EDB3E4C2D486AF40007C386 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB3E402D486AF40007C386 /* Vector3.swift */; };
 		1EDB3E4D2D486AF40007C386 /* SKAction+SpecialEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB3E3A2D486AF40007C386 /* SKAction+SpecialEffects.swift */; };
 		1EDB3E4F2D48739B0007C386 /* BlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB3E4E2D48739B0007C386 /* BlockNode.swift */; };
+		1EDB3E512D4909160007C386 /* MessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB3E502D4909160007C386 /* MessageNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		1EDB3E3F2D486AF40007C386 /* SKTTimingFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTTimingFunctions.swift; sourceTree = "<group>"; };
 		1EDB3E402D486AF40007C386 /* Vector3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
 		1EDB3E4E2D48739B0007C386 /* BlockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNode.swift; sourceTree = "<group>"; };
+		1EDB3E502D4909160007C386 /* MessageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				1EDB3E302D46F88A0007C386 /* BedNode.swift */,
 				1EDB3E332D4862120007C386 /* CatNode.swift */,
 				1EDB3E4E2D48739B0007C386 /* BlockNode.swift */,
+				1EDB3E502D4909160007C386 /* MessageNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E1612612D4588AC003512A0 /* AppDelegate.swift in Sources */,
+				1EDB3E512D4909160007C386 /* MessageNode.swift in Sources */,
 				1EDB3E342D4862120007C386 /* CatNode.swift in Sources */,
 				1EDB3E312D46F88A0007C386 /* BedNode.swift in Sources */,
 				1E1612622D4588AC003512A0 /* GameScene.swift in Sources */,
