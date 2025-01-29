@@ -22,12 +22,23 @@ struct PhysicsCategory {
     static let Bed: UInt32 = 0b100 // 4
     static let Edge: UInt32 = 0b1000 // 8
     static let Label: UInt32 = 0b10000 // 16
+    static let Spring: UInt32 = 0b100000 // 32
+    static let Hook: UInt32 = 0b1000000 // 64
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     var bedNode: BedNode!
     var catNode: CatNode!
     var playable = true
+    var currentLevel: Int = 0
+    
+    //2
+    class func level(levelNum: Int) -> GameScene? {
+        let scene = GameScene(fileNamed: "Level\(levelNum)")!
+        scene.currentLevel = levelNum
+        scene.scaleMode = .aspectFill
+        return scene
+    }
 
     override func didMove(to view: SKView) {
         // Calculate playable margin
@@ -57,10 +68,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         SKTAudio.sharedInstance()
 //            .playBackgroundMusic("backgroundMusic.mp3")
         
-//        bedNode.setScale(1.5)
-//        catNode.setScale(1.5)
+//        let rotationConstraint = SKConstraint.zRotation(
+//        SKRange(lowerLimit: -π/4, upperLimit: π/4))
+//        catNode.parent!.constraints = [rotationConstraint]
     }
     
+    override func didSimulatePhysics() {
+        if playable {
+            if abs(catNode.parent!.zRotation) >
+                CGFloat(25).degreesToRadians() {
+                lose()
+            }
+        }
+    }
+    
+
     func didBegin(_ contact: SKPhysicsContact) {
         let collision = contact.bodyA.categoryBitMask
         | contact.bodyB.categoryBitMask
@@ -70,8 +92,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             PhysicsCategory.Label ? contact.bodyA.node :
             contact.bodyB.node) as? MessageNode
             labelNode?.didBounce()
-//            labelNode.didBounce()
-            print("bounce")
         }
         
         if !playable {
@@ -79,11 +99,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
 
         if collision == PhysicsCategory.Cat | PhysicsCategory.Bed {
-            print("SUCCESS")
+//            print("SUCCESS")
             win()
         } else if collision == PhysicsCategory.Cat
                     | PhysicsCategory.Edge {
-            print("FAIL")
+//            print("FAIL")
             lose()
         }
     }
@@ -95,9 +115,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func newGame() {
-        let scene = GameScene(fileNamed:"GameScene")
-        scene!.scaleMode = scaleMode
-        view!.presentScene(scene)
+        view!.presentScene(GameScene.level(levelNum: currentLevel))
     }
     
     func lose() {
@@ -116,7 +134,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         playable = false
         SKTAudio.sharedInstance().pauseBackgroundMusic()
         SKTAudio.sharedInstance().playSoundEffect("win.mp3")
+        
         inGameMessage(text: "Nice job!")
+        currentLevel += 1
+        
         run(SKAction.afterDelay(5, runBlock: newGame))
         catNode.curlAt(scenePoint: bedNode.position)
     }
