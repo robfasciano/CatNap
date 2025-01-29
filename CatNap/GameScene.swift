@@ -31,13 +31,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var catNode: CatNode!
     var playable = true
     var currentLevel: Int = 0
+    var hookBaseNode: HookBaseNode?
     
     //2
     class func level(levelNum: Int) -> GameScene? {
         let scene = GameScene(fileNamed: "Level\(levelNum)")!
-        scene.currentLevel = levelNum
-        scene.scaleMode = .aspectFill
-        return scene
+            scene.currentLevel = levelNum
+            scene.scaleMode = .aspectFill
+            return scene
     }
 
     override func didMove(to view: SKView) {
@@ -67,14 +68,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //uncomment out second line for background music
         SKTAudio.sharedInstance()
 //            .playBackgroundMusic("backgroundMusic.mp3")
-        
+
+//          example of a rotational constraint on the cat
 //        let rotationConstraint = SKConstraint.zRotation(
 //        SKRange(lowerLimit: -π/4, upperLimit: π/4))
 //        catNode.parent!.constraints = [rotationConstraint]
+        
+        hookBaseNode = childNode(withName: "hookBase") as? HookBaseNode
     }
     
     override func didSimulatePhysics() {
-        if playable {
+        if playable && hookBaseNode?.isHooked != true {
             if abs(catNode.parent!.zRotation) >
                 CGFloat(25).degreesToRadians() {
                 lose()
@@ -105,6 +109,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     | PhysicsCategory.Edge {
 //            print("FAIL")
             lose()
+        } else if collision == PhysicsCategory.Cat | PhysicsCategory.Hook
+                    && hookBaseNode?.isHooked == false {
+            hookBaseNode!.hookCat(catPhysicsBody:
+                                    catNode.parent!.physicsBody!)
         }
     }
     

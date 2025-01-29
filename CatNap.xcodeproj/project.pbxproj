@@ -26,6 +26,7 @@
 		1EAE7B202D49AF560043C03C /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1EAE7B1F2D49AF560043C03C /* Level2.sks */; };
 		1EAE7B222D49B4C00043C03C /* SpringNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE7B212D49B4C00043C03C /* SpringNode.swift */; };
 		1EAE7B242D49BAAC0043C03C /* HookBaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE7B232D49BAAC0043C03C /* HookBaseNode.swift */; };
+		1EAE7B262D4A639F0043C03C /* Level3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1EAE7B252D4A639F0043C03C /* Level3.sks */; };
 		1EDB3E312D46F88A0007C386 /* BedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB3E302D46F88A0007C386 /* BedNode.swift */; };
 		1EDB3E342D4862120007C386 /* CatNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB3E332D4862120007C386 /* CatNode.swift */; };
 		1EDB3E422D486AF40007C386 /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB3E3C2D486AF40007C386 /* SKNode+Extensions.swift */; };
@@ -65,6 +66,7 @@
 		1EAE7B1F2D49AF560043C03C /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
 		1EAE7B212D49B4C00043C03C /* SpringNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringNode.swift; sourceTree = "<group>"; };
 		1EAE7B232D49BAAC0043C03C /* HookBaseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HookBaseNode.swift; sourceTree = "<group>"; };
+		1EAE7B252D4A639F0043C03C /* Level3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level3.sks; sourceTree = "<group>"; };
 		1EDB3E302D46F88A0007C386 /* BedNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedNode.swift; sourceTree = "<group>"; };
 		1EDB3E332D4862120007C386 /* CatNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatNode.swift; sourceTree = "<group>"; };
 		1EDB3E352D486AF40007C386 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				1E085B1C2D4689A700B6F55C /* Cat.sks */,
 				1E2D63462D46BBD4001C686E /* CatCurl.sks */,
 				1E2D63482D46BD5B001C686E /* CatWakeUp.sks */,
+				1EAE7B252D4A639F0043C03C /* Level3.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				1E2D63472D46BBD4001C686E /* CatCurl.sks in Resources */,
 				1E16125B2D4588AC003512A0 /* win.mp3 in Resources */,
 				1E16125C2D4588AC003512A0 /* Actions.sks in Resources */,
+				1EAE7B262D4A639F0043C03C /* Level3.sks in Resources */,
 				1E16125D2D4588AC003512A0 /* Assets.xcassets in Resources */,
 				1E16125E2D4588AC003512A0 /* Level1.sks in Resources */,
 				1E16125F2D4588AC003512A0 /* LaunchScreen.storyboard in Resources */,

@@ -7,7 +7,9 @@
 
 import SpriteKit
 
-class CatNode: SKSpriteNode, EventListenerNode {
+class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
+    static let kCatTappedNotification = "kCatTappedNotification"
+    
     func didMoveToScene() {
         print("cat added to scene")
         
@@ -17,7 +19,22 @@ class CatNode: SKSpriteNode, EventListenerNode {
         parent!.physicsBody!.categoryBitMask = PhysicsCategory.Cat
         parent!.physicsBody!.collisionBitMask = PhysicsCategory.Block | PhysicsCategory.Edge | PhysicsCategory.Spring
         parent!.physicsBody!.contactTestBitMask = PhysicsCategory.Bed | PhysicsCategory.Edge
+        
+        isUserInteractionEnabled = true
     }
+    
+    func interact() {
+        NotificationCenter.default.post(Notification(
+            name:NSNotification.Name(CatNode.kCatTappedNotification),
+            object: nil))
+    }
+    
+    override func touchesEnded(
+        _ touches: Set<UITouch>,
+        with event: UIEvent?) {
+            super.touchesEnded(touches, with: event)
+            interact()
+        }
     
     func wakeUp() {
         // 1
@@ -55,7 +72,6 @@ class CatNode: SKSpriteNode, EventListenerNode {
         //adding this is a work around for a frozen animation in scene
         self.isPaused = true
         self.isPaused = false
-
     }
     
 }
