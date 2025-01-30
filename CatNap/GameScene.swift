@@ -75,6 +75,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        catNode.parent!.constraints = [rotationConstraint]
         
         hookBaseNode = childNode(withName: "hookBase") as? HookBaseNode
+        
+        guard let fulcrumNode = childNode(withName: "seesawBase") else {return}
+        guard let leverNode = childNode(withName: "seesaw") else {return}
+        let pinJoint = SKPhysicsJointPin.joint(
+            withBodyA: fulcrumNode.physicsBody!,
+            bodyB: leverNode.physicsBody!,
+            anchor: fulcrumNode.position)
+        scene!.physicsWorld.add(pinJoint)
+        print("should be pinned")
     }
     
     override func didSimulatePhysics() {
@@ -133,6 +142,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         SKTAudio.sharedInstance().playSoundEffect("lose.mp3")
         //2
         inGameMessage(text: "Try again...")
+        if currentLevel > 1 {
+            currentLevel -= 1
+        }
         //3
         run(SKAction.afterDelay(5, runBlock: newGame))
         catNode.wakeUp()
@@ -144,7 +156,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         SKTAudio.sharedInstance().playSoundEffect("win.mp3")
         
         inGameMessage(text: "Nice job!")
-        currentLevel += 1
+        if currentLevel < 4 {
+            currentLevel += 1
+        }
         
         run(SKAction.afterDelay(5, runBlock: newGame))
         catNode.curlAt(scenePoint: bedNode.position)

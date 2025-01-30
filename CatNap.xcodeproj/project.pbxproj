@@ -27,6 +27,8 @@
 		1EAE7B222D49B4C00043C03C /* SpringNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE7B212D49B4C00043C03C /* SpringNode.swift */; };
 		1EAE7B242D49BAAC0043C03C /* HookBaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE7B232D49BAAC0043C03C /* HookBaseNode.swift */; };
 		1EAE7B262D4A639F0043C03C /* Level3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1EAE7B252D4A639F0043C03C /* Level3.sks */; };
+		1EAE7B282D4AE4C90043C03C /* StoneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE7B272D4AE4C90043C03C /* StoneNode.swift */; };
+		1EAE7B2A2D4B056F0043C03C /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1EAE7B292D4B056F0043C03C /* Level4.sks */; };
 		1EDB3E312D46F88A0007C386 /* BedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB3E302D46F88A0007C386 /* BedNode.swift */; };
 		1EDB3E342D4862120007C386 /* CatNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB3E332D4862120007C386 /* CatNode.swift */; };
 		1EDB3E422D486AF40007C386 /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB3E3C2D486AF40007C386 /* SKNode+Extensions.swift */; };
@@ -67,6 +69,8 @@
 		1EAE7B212D49B4C00043C03C /* SpringNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringNode.swift; sourceTree = "<group>"; };
 		1EAE7B232D49BAAC0043C03C /* HookBaseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HookBaseNode.swift; sourceTree = "<group>"; };
 		1EAE7B252D4A639F0043C03C /* Level3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level3.sks; sourceTree = "<group>"; };
+		1EAE7B272D4AE4C90043C03C /* StoneNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneNode.swift; sourceTree = "<group>"; };
+		1EAE7B292D4B056F0043C03C /* Level4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level4.sks; sourceTree = "<group>"; };
 		1EDB3E302D46F88A0007C386 /* BedNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedNode.swift; sourceTree = "<group>"; };
 		1EDB3E332D4862120007C386 /* CatNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatNode.swift; sourceTree = "<group>"; };
 		1EDB3E352D486AF40007C386 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
@@ -101,10 +105,11 @@
 			children = (
 				1E16124F2D4588AC003512A0 /* Level1.sks */,
 				1EAE7B1F2D49AF560043C03C /* Level2.sks */,
+				1EAE7B252D4A639F0043C03C /* Level3.sks */,
 				1E085B1C2D4689A700B6F55C /* Cat.sks */,
 				1E2D63462D46BBD4001C686E /* CatCurl.sks */,
 				1E2D63482D46BD5B001C686E /* CatWakeUp.sks */,
-				1EAE7B252D4A639F0043C03C /* Level3.sks */,
+				1EAE7B292D4B056F0043C03C /* Level4.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				1EDB3E502D4909160007C386 /* MessageNode.swift */,
 				1EAE7B212D49B4C00043C03C /* SpringNode.swift */,
 				1EAE7B232D49BAAC0043C03C /* HookBaseNode.swift */,
+				1EAE7B272D4AE4C90043C03C /* StoneNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -253,6 +259,7 @@
 				1E1612592D4588AC003512A0 /* mrreow.mp3 in Resources */,
 				1E16125A2D4588AC003512A0 /* pop.mp3 in Resources */,
 				1E2D63492D46BD5B001C686E /* CatWakeUp.sks in Resources */,
+				1EAE7B2A2D4B056F0043C03C /* Level4.sks in Resources */,
 				1EAE7B202D49AF560043C03C /* Level2.sks in Resources */,
 				1E2D63472D46BBD4001C686E /* CatCurl.sks in Resources */,
 				1E16125B2D4588AC003512A0 /* win.mp3 in Resources */,
@@ -280,6 +287,7 @@
 				1E1612622D4588AC003512A0 /* GameScene.swift in Sources */,
 				1EDB3E422D486AF40007C386 /* SKNode+Extensions.swift in Sources */,
 				1EDB3E432D486AF40007C386 /* SKTAudio.swift in Sources */,
+				1EAE7B282D4AE4C90043C03C /* StoneNode.swift in Sources */,
 				1EDB3E442D486AF40007C386 /* SKTEffects.swift in Sources */,
 				1EDB3E452D486AF40007C386 /* CGVector+Extensions.swift in Sources */,
 				1EDB3E462D486AF40007C386 /* SKTTimingFunctions.swift in Sources */,
