@@ -76,14 +76,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         hookBaseNode = childNode(withName: "hookBase") as? HookBaseNode
         
-        guard let fulcrumNode = childNode(withName: "seesawBase") else {return}
-        guard let leverNode = childNode(withName: "seesaw") else {return}
-        let pinJoint = SKPhysicsJointPin.joint(
-            withBodyA: fulcrumNode.physicsBody!,
-            bodyB: leverNode.physicsBody!,
-            anchor: fulcrumNode.position)
-        scene!.physicsWorld.add(pinJoint)
-        print("should be pinned")
+        //pinning in code (vs scene.sks)
+//        guard let fulcrumNode = childNode(withName: "seesawBase") else {return}
+//        guard let leverNode = childNode(withName: "seesaw") else {return}
+//        let pinJoint = SKPhysicsJointPin.joint(
+//            withBodyA: fulcrumNode.physicsBody!,
+//            bodyB: leverNode.physicsBody!,
+//            anchor: leverNode.position)
+//        scene!.physicsWorld.add(pinJoint)
+//        print("should be pinned")
     }
     
     override func didSimulatePhysics() {
