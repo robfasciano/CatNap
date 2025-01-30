@@ -157,7 +157,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         SKTAudio.sharedInstance().playSoundEffect("win.mp3")
         
         inGameMessage(text: "Nice job!")
-        if currentLevel < 4 {
+        if currentLevel < 6 {
             currentLevel += 1
         }
         
