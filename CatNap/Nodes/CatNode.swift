@@ -9,6 +9,7 @@ import SpriteKit
 
 class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     static let kCatTappedNotification = "kCatTappedNotification"
+    private var isDoingTheDance = false
     
     func didMoveToScene() {
         print("cat added to scene")
@@ -27,6 +28,18 @@ class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
         NotificationCenter.default.post(Notification(
             name:NSNotification.Name(CatNode.kCatTappedNotification),
             object: nil))
+        if DiscoBallNode.isDiscoTime && !isDoingTheDance {
+            isDoingTheDance = true
+            let move = SKAction.sequence([
+                SKAction.moveBy(x: 80, y: 0, duration: 0.5),
+                SKAction.wait(forDuration: 0.5),
+                SKAction.moveBy(x: -30, y: 0, duration: 0.5)
+            ])
+            let dance = SKAction.repeat(move, count: 3)
+            parent!.run(dance, completion: {
+                self.isDoingTheDance = false
+            })
+        }
     }
     
     override func touchesEnded(

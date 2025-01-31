@@ -67,7 +67,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //uncomment out second line for background music
         SKTAudio.sharedInstance()
-//            .playBackgroundMusic("backgroundMusic.mp3")
+            .playBackgroundMusic("backgroundMusic.mp3")
 
 //          example of a rotational constraint on the cat
 //        let rotationConstraint = SKConstraint.zRotation(

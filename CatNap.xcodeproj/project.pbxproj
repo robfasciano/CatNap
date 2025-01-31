@@ -35,6 +35,7 @@
 		1EAE7B332D4BB15D0043C03C /* Level5.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1EAE7B302D4BB15D0043C03C /* Level5.sks */; };
 		1EAE7B352D4BB3180043C03C /* PictureNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE7B342D4BB3180043C03C /* PictureNode.swift */; };
 		1EAE7B372D4BB58A0043C03C /* DiscoBallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE7B362D4BB58A0043C03C /* DiscoBallNode.swift */; };
+		1EAE7B392D4C542C0043C03C /* HintNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE7B382D4C542C0043C03C /* HintNode.swift */; };
 		1EDB3E312D46F88A0007C386 /* BedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB3E302D46F88A0007C386 /* BedNode.swift */; };
 		1EDB3E342D4862120007C386 /* CatNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB3E332D4862120007C386 /* CatNode.swift */; };
 		1EDB3E422D486AF40007C386 /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB3E3C2D486AF40007C386 /* SKNode+Extensions.swift */; };
@@ -83,6 +84,7 @@
 		1EAE7B312D4BB15D0043C03C /* Level6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level6.sks; sourceTree = "<group>"; };
 		1EAE7B342D4BB3180043C03C /* PictureNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureNode.swift; sourceTree = "<group>"; };
 		1EAE7B362D4BB58A0043C03C /* DiscoBallNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoBallNode.swift; sourceTree = "<group>"; };
+		1EAE7B382D4C542C0043C03C /* HintNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintNode.swift; sourceTree = "<group>"; };
 		1EDB3E302D46F88A0007C386 /* BedNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedNode.swift; sourceTree = "<group>"; };
 		1EDB3E332D4862120007C386 /* CatNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatNode.swift; sourceTree = "<group>"; };
 		1EDB3E352D486AF40007C386 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				1EAE7B272D4AE4C90043C03C /* StoneNode.swift */,
 				1EAE7B342D4BB3180043C03C /* PictureNode.swift */,
 				1EAE7B362D4BB58A0043C03C /* DiscoBallNode.swift */,
+				1EAE7B382D4C542C0043C03C /* HintNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				1EDB3E452D486AF40007C386 /* CGVector+Extensions.swift in Sources */,
 				1EDB3E462D486AF40007C386 /* SKTTimingFunctions.swift in Sources */,
 				1EDB3E4F2D48739B0007C386 /* BlockNode.swift in Sources */,
+				1EAE7B392D4C542C0043C03C /* HintNode.swift in Sources */,
 				1EDB3E472D486AF40007C386 /* Int+Extensions.swift in Sources */,
 				1EDB3E482D486AF40007C386 /* CGPoint+Extensions.swift in Sources */,
 				1EDB3E492D486AF40007C386 /* SKAction+Extensions.swift in Sources */,
